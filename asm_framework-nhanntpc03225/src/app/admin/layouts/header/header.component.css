@@ -1,0 +1,6 @@
+.show {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    visibility: visible !important;
+}

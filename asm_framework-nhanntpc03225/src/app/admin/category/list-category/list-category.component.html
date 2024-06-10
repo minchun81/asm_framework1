@@ -1,0 +1,60 @@
+<div class="layout-content">
+    <div class="container-fluid flex-grow-1 container-p-y">
+        <router-outlet></router-outlet>
+        <h4 class="font-weight-bold py-3 mb-0">List Category</h4>
+
+
+        <hr class="border-light container-m--x my-4">
+
+        <div>
+            <a class="btn btn-success mb-3" routerLink="/admin/add-category">Add Category</a>
+        </div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td scope="col"><img width="150px" src="https://www.jordbærklausen.dk/wp-content/uploads/2021/04/h3-product10.png" alt=""></td>
+                    <td scope="col">Vegetable</td>
+
+                    <td><a type="a" class="btn btn-round btn-success">active</a></td>
+                    <td> <a routerLink="/admin/edit-category" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
+                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td scope="col"><img width="150px" src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100,s_300x300/https://cdn.tgdd.vn/Products/Images/2386/85530/thung-48-hop-sua-tuoi-it-duong-vinamilk-180ml-070124-101932-600x600.jpg" alt=""></td>
+                    <td scope="col">Milk</td>
+
+                    <td>
+                        <div class="btn btn-round btn-success">active</div>
+                    </td>
+
+                    <td> <a routerLink="/admin/edit-category" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
+                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td scope="col"><img width="150px" src="https://product.hstatic.net/200000585055/product/fillet_co_bo_a1d2fa7d1efd4d7d8db30f162d3df61e_large.png" alt=""></td>
+                    <td scope="col">Beef</td>
+
+                    <td>
+                        <div class="btn btn-round btn-success">active</div>
+                    </td>
+
+                    <td> <a routerLink="/admin/edit-category" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
+                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
