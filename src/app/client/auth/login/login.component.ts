@@ -18,6 +18,7 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
+      // Thực hiện xử lý đăng nhập ở đây, ví dụ sử dụng AuthService
       console.log('Form submitted', this.loginForm.value);
     } else {
       this.validateAllFormFields(this.loginForm);

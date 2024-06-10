@@ -7,6 +7,8 @@ import { ContactComponent } from './contact/contact/contact.component';
 import { LoginComponent } from './auth/login/login.component'; 
 import { RegisterComponent } from './auth/register/register.component'; 
 import { ClientComponentComponent } from './client-component/client-component.component';
+import { HeaderComponent } from './layouts/header/header.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,7 +20,8 @@ const routes: Routes = [
       { path: 'client-product', component: ClientProductComponent},
       { path: 'contact', component: ContactComponent},
       { path: 'register', component: RegisterComponent},
-      { path: 'login', component:  LoginComponent}
+      { path: 'login', component:  LoginComponent},
+      { path: 'header', component:  HeaderComponent}
     ]
   },  
 ]

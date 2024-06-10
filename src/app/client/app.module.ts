@@ -11,6 +11,9 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ClientIndexComponent } from './client-index/client-index.component';
 import { ClientProductComponent } from './client-product/client-product.component';
 import { ClientComponentComponent } from './client-component/client-component.component';
+import { AdminModule } from '../admin/admin.module';
+import { HeaderComponent } from './layouts/header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -20,14 +23,17 @@ import { ClientComponentComponent } from './client-component/client-component.co
     ClientIndexComponent,
     ClientProductComponent,
     ClientComponentComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

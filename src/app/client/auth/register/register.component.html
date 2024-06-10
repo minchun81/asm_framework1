@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-12 col-lg-10">
@@ -9,10 +10,10 @@
             <a href="#" class="btn btn-white btn-outline-white">Sign In</a>
           </div>
         </div>
-        <div class="login-wrap p-4 p-lg-5">
+        <div class="text-wrap p-4 p-lg-5">
           <div class="d-flex">
             <div class="w-100">
-              <h3 class="mb-4">Sign Up</h3>
+              <h2 class="mb-4">Sign Up</h2>
             </div>
             <div class="w-100">
               <p class="social-media d-flex justify-content-end">
@@ -23,7 +24,7 @@
           </div>
           <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-group mb-3">
-              <label class="label" for="name">Email</label>
+              <label class="label" for="email">Email</label>
               <input type="text" class="form-control" formControlName="email" placeholder="Email">
               <div *ngIf="registerForm.get('email').touched && registerForm.get('email').invalid">
                 <div *ngIf="registerForm.get('email').errors?.email" class="error-message">Email không hợp lệ</div>
