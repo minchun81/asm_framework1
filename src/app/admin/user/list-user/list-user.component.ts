@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../entities/user';
 import { UserService } from '../../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-user',
@@ -12,7 +13,7 @@ export class ListUserComponent implements OnInit {
   users: User[] = [];
   adduser: User = { userName:'', password:'', email:'', name:'', role:''};
 
-  constructor(private userService : UserService) { }
+  constructor(private userService : UserService, private router:Router) { }
 
   ngOnInit():void {
     this.fetchAllUsers();
@@ -35,9 +36,9 @@ export class ListUserComponent implements OnInit {
     );
   }
   //thêm người dùng mới
-  onCreatePost(dataUser: User): void {
+  onCreateUser(dataUser: User): void {
     if (this.adduser.id) {
-      this.userService.updatePost(this.adduser.id, dataUser).subscribe(p => {
+      this.userService.updateUser(this.adduser.id, dataUser).subscribe(p => {
         console.log('Bài viết đã được cập nhật:', p);
         this.fetchAllUsers();
         this.resetForm();
@@ -61,8 +62,26 @@ export class ListUserComponent implements OnInit {
     }
   }
 
+  deleteUser(id: string): void {
+    if (confirm('Bạn có chắc chắn muốn xóa bài viết này?')) {
+      this.userService.deleteUser(id).subscribe(() => {
+        this.fetchAllUsers();
+        this.error = null;
+      }, error => {
+        this.error = 'Lỗi ';
+      console.error('Lỗi:', error);
+      });
+    }
+  }
+
+  editUser(id: string): void {
+    this.userService.getUserById(id).subscribe(user => {
+      this.adduser = user;
+    });
+  }
+
   onSubmit(): void {
-    this.onCreatePost(this.adduser);
+    this.onCreateUser(this.adduser);
   }
   resetForm(): void{
     this.adduser = { userName:'', password:'', email:'', name:'', role:''};

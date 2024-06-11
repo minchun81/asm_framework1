@@ -15,38 +15,32 @@
         <div class="card mb-4">
             <h6 class="card-header">Edit User</h6>
             <div class="card-body">
-                <form>
-                    <div class="form-group col-md-6">
-                        <label class="form-label">Username</label>
-                        <input type="text" class="form-control" placeholder="User">
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="form-label ">Pass</label>
-                        <input type="password" class="form-control" placeholder="Password">
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="form-label ">Email</label>
-                        <input type="email" class="form-control" placeholder="Email">
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="form-label ">Name</label>
-                        <input type="text" class="form-control" placeholder="Name">
-                        <div class="clearfix"></div>
-                    </div>
+              <form *ngIf="adduser" (ngSubmit)="onSubmit()">
+                <div class="form-group col-md-6">
+                  <label class="form-label">Username</label>
+                  <input type="text" class="form-control" placeholder="User" [(ngModel)]="adduser.userName" name="userName">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="form-label">Pass</label>
+                  <input type="password" class="form-control" placeholder="Password" [(ngModel)]="adduser.password" name="password">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="Email" [(ngModel)]="adduser.email" name="email">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" placeholder="Name" [(ngModel)]="adduser.name" name="name">
+                  <div class="clearfix"></div>
+                </div>
 
-                    <div class="form-group col-md-4">
-                        <label class="form-label">Role</label>
-                        <select class="custom-select">
-                            <option>Employee</option>
-                            <option>Admin</option>
-                        </select>
-                    </div>
 
-                    <button type="submit" class="btn btn-primary">Save Edit</button>
-                </form>
+
+                <button type="submit" class="btn btn-primary">Save Edit</button>
+              </form>
             </div>
         </div>
 
