@@ -1,0 +1,65 @@
+.container {
+    font-family: 'Roboto', sans-serif;
+    background-color:#e64c7d; 
+    padding: 50px 0;
+  }
+  
+  .login-wrap {
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+    padding: 30px;
+  }
+  
+  .login-wrap h3 {
+    color: #0c0c0c; 
+  }
+  
+  .btn-primary {
+    background-color:#e64c7d; 
+    border-color: #007bff; 
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; 
+    border-color: #0056b3; 
+  }
+  
+  .error-message {
+    color: #dc3545; 
+  }
+  
+  .checkbox-primary input[type="checkbox"] + .checkmark {
+    background-color: #007bff; 
+  }
+  
+  .checkbox-primary input[type="checkbox"]:checked + .checkmark {
+    background-color: #0056b3; 
+  }
+  /* welcome */
+  .text-wrap {
+    border-radius: 10px; /* Bo tròn góc */
+    background-color: #ffffff; /* Nền màu trắng */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  }
+  
+  .text-wrap h2 {
+    color: #333333; /* Màu chữ cho tiêu đề */
+  }
+  
+  .text-wrap p {
+    color: #666666; /* Màu chữ cho đoạn văn */
+  }
+  
+  .text-wrap a.btn {
+    color: #ffffff; /* Màu chữ cho nút */
+    background-color: #007bff; /* Màu nền cho nút */
+    border-color: #007bff; /* Màu viền cho nút */
+  }
+  
+  .text-wrap a.btn:hover {
+    background-color: #0056b3; /* Màu nền cho nút khi hover */
+    border-color: #0056b3; /* Màu viền cho nút khi hover */
+  }
+  
+  
