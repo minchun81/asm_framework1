@@ -12,34 +12,27 @@
         <div class="card mb-4">
             <h6 class="card-header">Edit Category</h6>
             <div class="card-body">
-                <form>
+                <form (ngSubmit)="updateCategory()">
                     <div class="form-group col-md-6">
                         <label class="form-label">Image</label>
-                        <input type="file" class="form-control" placeholder="Image">
+                        <input type="text" class="form-control" [(ngModel)]="category.image" name="image" placeholder="Image">
                         <div class="clearfix"></div>
                     </div>
                     <div class="form-group col-md-6">
                         <label class="form-label ">Name</label>
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" class="form-control" [(ngModel)]="category.nameCategory" name="nameCategory" placeholder="Name">
                         <div class="clearfix"></div>
                     </div>
-
-
                     <div class="form-group col-md-4">
                         <label class="form-label">Status</label>
-                        <select class="custom-select">
-                            <option>Active</option>
-                            <option>Disble</option>
+                        <select class="custom-select" [(ngModel)]="category.status" name="status">
+                            <option value="active">Active</option>
+                            <option value="disable">Disable</option>
                         </select>
                     </div>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" (click)="updateCategory()">Submit</button>
                 </form>
             </div>
         </div>
-
-
-
-
     </div>
 </div>

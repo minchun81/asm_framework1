@@ -20,7 +20,7 @@ const routes: Routes = [
       { path: '', component: IndexComponent }, // Route mặc định cho admin
       // category
       { path: 'list-category', component: ListCategoryComponent },
-      { path: 'edit-category', component: EditCategoryComponent },
+      { path: 'edit-category/:id', component: EditCategoryComponent },
       { path: 'add-category', component: AddCategoryComponent },
       // product
       { path: 'list-product', component: ListProductComponent },
