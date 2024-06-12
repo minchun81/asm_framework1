@@ -1,65 +1,140 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('../../../../assets/img/logo.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
 .container {
-    font-family: 'Roboto', sans-serif;
-    background-color:#e64c7d; 
-    padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wrap {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-wrap {
+  background: linear-gradient(135deg, #fcbf16 0%, #fcbf16 100%);
+  color: white;
+}
+
+.text-wrap h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.text-wrap p {
+  margin-bottom: 20px;
+}
+
+.text-wrap .btn {
+  background: white;
+  color: #fcbf16;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.text-wrap .btn:hover {
+  background: #fcbf16;
+  color: white;
+}
+
+.login-wrap {
+  background: white;
+  padding: 40px;
+}
+
+.login-wrap h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.form-group .form-control:focus {
+  border-color: #fcbf16;
+  box-shadow: none;
+}
+
+.form-group .submit {
+  background: #fcbf16;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-group .submit:hover {
+  background: #e5a615;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrap input {
+  margin-right: 10px;
+}
+
+.checkbox-wrap .checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #fcbf16;
+  border-radius: 5px;
+}
+
+.social-media .social-icon {
+  width: 40px;
+  height: 40px;
+  background: #fcbf16;
+  color: white;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-media .social-icon:hover {
+  background: #e5a615;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+      flex-direction: column;
   }
-  
-  .login-wrap {
-    background-color: #ffffff; 
-    border-radius: 10px; 
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
-    padding: 30px;
-  }
-  
-  .login-wrap h3 {
-    color: #0c0c0c; 
-  }
-  
-  .btn-primary {
-    background-color:#e64c7d; 
-    border-color: #007bff; 
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3; 
-    border-color: #0056b3; 
-  }
-  
-  .error-message {
-    color: #dc3545; 
-  }
-  
-  .checkbox-primary input[type="checkbox"] + .checkmark {
-    background-color: #007bff; 
-  }
-  
-  .checkbox-primary input[type="checkbox"]:checked + .checkmark {
-    background-color: #0056b3; 
-  }
-  /* welcome */
+
   .text-wrap {
-    border-radius: 10px; /* Bo tròn góc */
-    background-color: #ffffff; /* Nền màu trắng */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+      order: 1;
   }
-  
-  .text-wrap h2 {
-    color: #333333; /* Màu chữ cho tiêu đề */
+
+  .login-wrap {
+      order: 2;
   }
-  
-  .text-wrap p {
-    color: #666666; /* Màu chữ cho đoạn văn */
-  }
-  
-  .text-wrap a.btn {
-    color: #ffffff; /* Màu chữ cho nút */
-    background-color: #007bff; /* Màu nền cho nút */
-    border-color: #007bff; /* Màu viền cho nút */
-  }
-  
-  .text-wrap a.btn:hover {
-    background-color: #0056b3; /* Màu nền cho nút khi hover */
-    border-color: #0056b3; /* Màu viền cho nút khi hover */
-  }
-  
-  
+}

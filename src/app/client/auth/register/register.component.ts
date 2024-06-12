@@ -21,9 +21,11 @@ export class RegisterComponent {
 
   onSubmit() {
     if (this.registerForm.valid) {
-      // Xử lý đăng ký ở đây
-      console.log('Form submitted', this.registerForm.value);
-      // Navigate to the login page
+      // Lưu thông tin tài khoản vào localStorage
+      const userInfo = this.registerForm.value;
+      localStorage.setItem(userInfo.username, JSON.stringify(userInfo));
+
+      // Điều hướng đến trang đăng nhập
       this.router.navigateByUrl('/login');
     } else {
       this.validateAllFormFields(this.registerForm);

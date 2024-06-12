@@ -19,47 +19,71 @@
 </head>
 
 <body>
-  <div class="container topbar rounded-pill bg-primary d-none d-lg-block">
-  </div>
-  <div class="container px-0">
-    <nav class="navbar navbar-light bg-white navbar-expand-xl navbar-custom">
-      <a class="navbar-brand">
-        <img class="img-fluid logo rounded-circle" src="../../../assets/img/logo.png" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="fa fa-bars text-primary"></span>
-      </button>
-      <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
-        <div class="navbar-nav mx-auto">
-          <a class="nav-item nav-link active" href="">Trang chủ</a>
-          <div class="nav-item dropdown">
-            <a class="nav-item nav-link active" href="client-product">Sản phẩm</a>
-          </div>
-          <a class="nav-item nav-link">Giới thiệu</a>
-          <a class="nav-item nav-link">Chính sách</a>
-          <a class="nav-item nav-link" href="contact">Liên hệ</a>
-        </div>
-        <div class="d-flex m-3 me-0">
-          <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal">
-            <i class="fas fa-search text-primary"></i>
-          </button>
-          <a class="position-relative me-4 my-auto">
-            <i class="fa fa-shopping-bag fa-2x"></i>
-            <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px">3</span>
-          </a>
-          <a class="my-auto">
-            <div class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggles"> <i id="user-icon" class="fas fa-user fa-2x"></i></a>
-              <div class="menu dropdown-menu  bg-secondary rounded-0">
-                <a class="dropdown-item" href="login"> Đăng nhập</a>
-                <a class="dropdown-item" href="register"> Đăng kí</a>
-              </div>
+  <div class="container-fluid fixed-top">
+    <div class="container topbar rounded-pill d-none d-lg-block">
+        <div class="d-flex justify-content-between">
+            <div class="top-info ps-2">
+                <small class="me-3"><i class="fas fa-map-marker-alt me-2"></i>
+                    <a href="#" class="text-white">158, Xô Viết Nghệ Tỉnh, TP.HCM</a></small>
+                <small class="me-3"><i class="fas fa-envelope me-2"></i><a href="#"
+                        class="text-white">tnfood@gmail.com</a></small>
             </div>
-          </a>
+            <div class="top-link pe-2">
+                <a href="#" class="text-white"><small class="text-white mx-2">Chính sách bảo mật</small>/</a>
+                <a href="#" class="text-white"><small class="text-white mx-2">Điều khoản sử dụng</small></a>
+            </div>
         </div>
-      </div>
-    </nav>
-  </div>
+    </div>
+            
+    <div class="container px-0">
+        <nav class="navbar navbar-light bg-white navbar-expand-xl">
+            <a href="index.html" class="navbar-brand">
+                <img class="img-fluid logo w-25 h-25 rounded-circle" style="width: 130px; height: 130px;"
+                    src="../../../assets/img/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="" class="nav-item nav-link active">Trang chủ</a>
+                    <div class="nav-item dropdown">
+                        <a href="client-product" class="nav-link dropdown-toggle">Sản phẩm</a>
+                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                            <a href="#" class="dropdown-item">Trái Cây</a>
+                            <a href="#" class="dropdown-item">Rau củ</a>
+                            <a href="#" class="dropdown-item">Thịt</a>
+                        </div>
+                    </div>
+                    <a href="" class="nav-item nav-link">Giới thiệu</a>
+                    <a href="" class="nav-item nav-link">Chính sách</a>
+                    <a href="contact" class="nav-item nav-link">Liên hệ</a>
+                </div>
+                <div class="d-flex m-3 me-0">
+                    <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4"
+                        data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="#" class="position-relative me-4 my-auto">
+                        <i class="fa fa-shopping-bag fa-2x"></i>
+                        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
+                            style="top: -5px; left: 15px; height: 20px; min-width: 20px">3</span>
+                    </a>
+                    <a href="#" class="my-auto">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggles"> <i id="user-icon" class="fas fa-user fa-2x"></i></a>
+                            <div class="menu dropdown-menu bg-secondary rounded-0">
+                                <a href="login" class="dropdown-item"> Đăng nhập</a>
+                                <a href="register" class="dropdown-item"> Đăng kí</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
   <!-- Contact Start -->
   <div class="container-fluid contact py-5">
     <div class="container py-5">
@@ -117,182 +141,189 @@
   <!-- Footer Start -->
   <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
     <div class="container py-5">
-      <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5)">
-        <div class="row g-4">
-          <div class="col-lg-3">
-            <a href="#">
-              <h1 class="text-primary mb-0">
-                <font style="vertical-align: inherit;">
-                  <font style="vertical-align: inherit;"><img class="img-fluid logo w-25 h-25 rounded-circle" style="width: 130px; height: 130px;" src="img/logo.png" alt=""></font>
-                </font>
-              </h1>
-              <p class="text-secondary mb-0">
-                <font style="vertical-align: inherit;">
-                  <font style="vertical-align: inherit;">Sản phẩm tươi sống</font>
-                </font>
-              </p>
-            </a>
-          </div>
-          <div class="col-lg-9">
-            <div class="d-flex justify-content-end pt-3">
-              <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-              <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-              <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-              <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+        <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5)">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <a href="#">
+                        <h1 class="text-primary mb-0">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"><img
+                                        class="img-fluid logo w-25 h-25 rounded-circle"
+                                        style="width: 130px; height: 130px;" src="../../../assets/img/logo.png"
+                                        alt=""></font>
+                            </font>
+                        </h1>
+                        <p class="text-secondary mb-0">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Sản phẩm tươi sống</font>
+                            </font>
+                        </p>
+                    </a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-end pt-3">
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>                    
             </div>
-          </div>
         </div>
-      </div>
-      <div class="row g-5">
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-item">
-            <h4 class="text-light mb-3">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Tại sao mọi người thích chúng tôi!</font>
-              </font>
-            </h4>
-            <p class="mb-4">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;"></font>
-                <font style="vertical-align: inherit;">Ở NT FOODS thực phẩm luôn luôn tươi mới và sạch
-                  sẽ, chúng tôi lựa chọn những thực phẩm không có thuốc bảo vệ thực vật
-                  và chất bảo quản để đưa đến tay người tiêu dùng. Ở nơi đây, chất lượng là tuyệt đối!
-                </font>
-              </font>
-            </p>
-          </div>
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-light mb-3">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Tại sao mọi người thích chúng tôi!</font>
+                        </font>
+                    </h4>
+                    <p class="mb-4">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"></font>
+                            <font style="vertical-align: inherit;">Ở NT FOODS thực phẩm luôn luôn tươi mới và sạch
+                                sẽ, chúng tôi lựa chọn những thực phẩm không có thuốc bảo vệ thực vật
+                                và chất bảo quản để đưa đến tay người tiêu dùng. Ở nơi đây, chất lượng là tuyệt đối!
+                            </font>
+                        </font>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex flex-column text-start footer-item">
+                    <h4 class="text-light mb-3">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Thông tin cửa hàng</font>
+                        </font>
+                    </h4>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Về chúng tôi</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Liên hệ chúng tôi</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Chính sách bảo mật</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Điều khoản &amp; Điều kiện</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Chính sách hoàn trả</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Câu hỏi thường gặp &amp; Trợ giúp</font>
+                        </font>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex flex-column text-start footer-item">
+                    <h4 class="text-light mb-3">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Tài khoản</font>
+                        </font>
+                    </h4>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Tài khoản của tôi</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Chi tiết cửa hàng</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Giỏ hàng</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Danh sách yêu thích</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">lịch sử đơn hàng</font>
+                        </font>
+                    </a>
+                    <a class="btn-link" href="">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Đơn đặt hàng quốc tế</font>
+                        </font>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-light mb-3">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Liên hệ</font>
+                        </font>
+                    </h4>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Địa chỉ: 158, Xô Viết Nghệ Tỉnh, TP.HCM</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Email: tnfood@gmail.com</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Điện thoại: 0329 023 124</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Thanh toán được chấp nhận</font>
+                        </font>
+                    </p>
+                    <img src="../../../assets/img/payment.png" class="img-fluid" alt="">
+                </div>
+            </div>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="d-flex flex-column text-start footer-item">
-            <h4 class="text-light mb-3">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Thông tin cửa hàng</font>
-              </font>
-            </h4>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Về chúng tôi</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Liên hệ chúng tôi</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Chính sách bảo mật</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Điều khoản &amp; Điều kiện</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Chính sách hoàn trả</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Câu hỏi thường gặp &amp; Trợ giúp</font>
-              </font>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="d-flex flex-column text-start footer-item">
-            <h4 class="text-light mb-3">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Tài khoản</font>
-              </font>
-            </h4>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Tài khoản của tôi</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Chi tiết cửa hàng</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Giỏ hàng</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Danh sách yêu thích</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">lịch sử đơn hàng</font>
-              </font>
-            </a>
-            <a class="btn-link" href="">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Đơn đặt hàng quốc tế</font>
-              </font>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-item">
-            <h4 class="text-light mb-3">
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Liên hệ</font>
-              </font>
-            </h4>
-            <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Địa chỉ: 158, Xô Viết Nghệ Tỉnh, TP.HCM</font>
-              </font>
-            </p>
-            <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Email: denhpc06669@gmail.com</font>
-              </font>
-            </p>
-            <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Điện thoại: 0329 023 124</font>
-              </font>
-            </p>
-            <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Thanh toán được chấp nhận</font>
-              </font>
-            </p>
-            <img src="img/payment.png" class="img-fluid" alt="">
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- Footer End -->
+</div>
+<!-- Footer End -->
 
-  <!-- Copyright Start -->
-  <div class="container-fluid copyright bg-dark py-4">
+<!-- Copyright Start -->
+<div class="container-fluid copyright bg-dark py-4">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">NT FOODS</font>
-              </font>
-            </a>
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;"> , Mọi quyền được bảo lưu.</font>
-            </font>
-          </span>
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">NT FOODS</font>
+                        </font>
+                    </a>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;"> , Mọi quyền được bảo lưu.</font>
+                    </font>
+                </span>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
   <!-- Copyright End -->
 
   <!-- Back to Top -->
