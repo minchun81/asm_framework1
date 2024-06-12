@@ -1,36 +1,140 @@
-.error-message {
-  color: red;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('../../../../assets/img/logo.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
 }
-.text-wrap {
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wrap {
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-wrap {
+  background: linear-gradient(135deg, #fcbf16 0%, #fcbf16 100%);
+  color: white;
 }
 
 .text-wrap h2 {
-  color: #333333;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .text-wrap p {
-  color: #666666;
+  margin-bottom: 20px;
 }
 
-.text-wrap a.btn {
-  color: #ffffff;
-  background-color: #007bff;
-  border-color: #007bff;
-  padding: 10px 20px; 
-  text-decoration: none; 
-  display: inline-block; 
+.text-wrap .btn {
+  background: white;
+  color: #fcbf16;
+  border: 2px solid white;
+  transition: all 0.3s ease;
 }
 
-.text-wrap a.btn:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+.text-wrap .btn:hover {
+  background: #fcbf16;
+  color: white;
 }
-.container {
-  font-family: 'Roboto', sans-serif;
-  background-color:#63ef75; 
-  padding: 50px 0;
+
+.login-wrap {
+  background: white;
+  padding: 40px;
+}
+
+.login-wrap h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.form-group .form-control:focus {
+  border-color: #fcbf16;
+  box-shadow: none;
+}
+
+.form-group .submit {
+  background: #fcbf16;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-group .submit:hover {
+  background: #e5a615; /* Màu hover */
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrap input {
+  margin-right: 10px;
+}
+
+.checkbox-wrap .checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #fcbf16;
+  border-radius: 5px;
+}
+
+.social-media .social-icon {
+  width: 40px;
+  height: 40px;
+  background: #fcbf16;
+  color: white;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-media .social-icon:hover {
+  background: #e5a615; /* Màu hover */
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+      flex-direction: column;
+  }
+
+  .text-wrap {
+      order: 1;
+  }
+
+  .login-wrap {
+      order: 2;
+  }
 }
