@@ -18,6 +18,7 @@ import { CategoryService } from './category.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ProductService } from './product.service';
 
 @NgModule({
   imports: [
@@ -45,7 +46,8 @@ import { RouterModule } from '@angular/router';
     AdminComponentComponent
   ],
   providers: [
-    CategoryService
+    CategoryService,
+    ProductService
   ],
 })
 export class AdminModule { }

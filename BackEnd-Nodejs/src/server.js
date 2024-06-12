@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-// const authRoutes = require('./routes/auth');
 const categoryRoutes = require('./routes/category');
+const productRoutes = require('./routes/product');
 const cors = require('cors');
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 // Use the post routes
 app.use('/api', categoryRoutes);
-// app.use('/api', authRoutes);
+app.use('/api', productRoutes);
 // Start the server
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);

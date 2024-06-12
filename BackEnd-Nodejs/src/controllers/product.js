@@ -1,6 +1,6 @@
 const Product = require('../models/product');
 
-exports.list = function(req, res, next) {
+exports.listProduct = function(req, res, next) {
     Product.getAll()
         .then(function(product) {
             res.status(200).json({ product });
@@ -10,28 +10,28 @@ exports.list = function(req, res, next) {
         });
 };
 
-exports.create = function(req, res, next) {
+exports.createProduct = function(req, res, next) {
     const { nameProduct, price, imageProduct, status, description, sortDescription } = req.body;
-    const category = { nameCategory, image, status };
+    const product = { nameProduct, price, imageProduct, status, description, sortDescription };
 
-    Product.create(category)
+    Product.create(product)
         .then(function(result) {
-            res.status(201).json({ idCategory: result.insertId, ...category });
+            res.status(201).json({ idProduct: result.insertId, ...product });
         })
         .catch(function(error) {
             res.status(400).send(error);
         });
 };
 
-exports.detail = function(req, res, next) {
-    const idCategory = req.params.id;
+exports.detailProduct = function(req, res, next) {
+    const idProduct = req.params.id;
 
-    Category.getById(idCategory)
+    Product.getById(idProduct)
         .then(function(result) {
             if (result) {
                 res.status(200).json(result);
             } else {
-                res.status(404).json({ message: "Category not found" });
+                res.status(404).json({ message: "Product not found" });
             }
         })
         .catch(function(error) {
@@ -39,17 +39,17 @@ exports.detail = function(req, res, next) {
         });
 };
 
-exports.update = function(req, res, next) {
-    const idCategory = req.params.id;
-    const { nameCategory, image, status } = req.body;
-    const category = { nameCategory, image, status };
+exports.updateProduct = function(req, res, next) {
+    const idProduct = req.params.id;
+    const { nameProduct, price, imageProduct, status, description, sortDescription } = req.body;
+    const product = { nameProduct, price, imageProduct, status, description, sortDescription };
 
-    Category.update(category, idCategory)
+    Product.update(product, idProduct)
         .then(function(result) {
             if (result.affectedRows === 0) {
-                res.status(404).json({ message: "Category not found" });
+                res.status(404).json({ message: "Product not found" });
             } else {
-                res.status(200).json({ idCategory, ...category });
+                res.status(200).json({ idProduct, ...product });
             }
         })
         .catch(function(error) {
@@ -57,15 +57,15 @@ exports.update = function(req, res, next) {
         });
 };
 
-exports.delete = function(req, res, next) {
-    const idCategory = req.params.id;
+exports.deleteProduct = function(req, res, next) {
+    const idProduct = req.params.id;
 
-    Category.delete(idCategory)
+    Product.delete(idProduct)
         .then(function(result) {
             if (result.affectedRows === 0) {
-                res.status(404).json({ message: "Category not found" });
+                res.status(404).json({ message: "Product not found" });
             } else {
-                res.status(200).json({ message: "Category deleted" });
+                res.status(200).json({ message: "Product deleted" });
             }
         })
         .catch(function(error) {
