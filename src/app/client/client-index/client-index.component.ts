@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../admin/product.service';
 
 @Component({
   selector: 'app-client-index',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-index.component.css']
 })
 export class ClientIndexComponent implements OnInit {
+  products: any[] = [];
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.fetchProducts();
+  }
+
+  fetchProducts(): void {
+    this.productService.getAllPosts().subscribe(data => {
+      this.products = data['product'];
+      console.log(data);
+    }, error => {
+      console.error('Error fetching products:', error);
+    });
   }
 
 }
