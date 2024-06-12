@@ -49,7 +49,7 @@ export class ListUserComponent implements OnInit {
       console.error('Lỗi cập nhật bài viết:', error);
       });
     } else {
-      this.userService.addUser(dataUser).subscribe(p => {
+      this.userService.post(dataUser).subscribe(p => {
         console.log(p);
         this.fetchAllUsers();
         this.resetForm();

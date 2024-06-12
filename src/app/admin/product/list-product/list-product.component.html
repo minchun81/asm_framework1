@@ -15,6 +15,7 @@
                     <th>Image</th>
                     <th>Name</th>
                     <th>Price</th>
+                    <th>Description</th>
                     <th>Status</th>
                     <th>Edit</th>
                     <th>Delete</th>
@@ -26,9 +27,10 @@
                     <td scope="col"><img width="150px" [src]="product.image" alt="{{ product.name }}">{{product.imageProduct}}</td>
                     <td scope="col">{{ product.nameProduct }}</td>
                     <td>{{ product.price }}</td>
+                    <td>{{ product.description }}</td>
                     <td><a type="a" class="btn btn-round btn-success">{{ product.status }}</a></td>
                     <td><a (click)="navigateToEditProduct(product.id)" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td><a (click)="deleteProduct(product.id)" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+                    <td><a (click)="deleteProduct(product.idProduct)" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
                 </tr>
             </tbody>
         </table>

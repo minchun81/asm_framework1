@@ -22,7 +22,7 @@ export class AddUserComponent implements OnInit {
   }
 
   onSubmit(): void{
-    this.userservice.addUser(this.user).subscribe(response => {
+    this.userservice.post(this.user).subscribe(response => {
       console.log('Người dùng đã thêm:', response);
       // Redirect to category list or another page
       this.router.navigate(['/admin/list-user']);
