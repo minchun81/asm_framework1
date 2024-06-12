@@ -15,32 +15,30 @@
         <div class="card mb-4">
             <h6 class="card-header">Edit User</h6>
             <div class="card-body">
-              <form *ngIf="adduser" (ngSubmit)="onSubmit()">
+              <form (ngSubmit)="onSaveEdit(form)" #form="ngForm">
                 <div class="form-group col-md-6">
                   <label class="form-label">Username</label>
-                  <input type="text" class="form-control" placeholder="User" [(ngModel)]="adduser.userName" name="userName">
+                  <input type="text" class="form-control" placeholder="User" [(ngModel)]="user.userName" name="userName">
                   <div class="clearfix"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label class="form-label">Pass</label>
-                  <input type="password" class="form-control" placeholder="Password" [(ngModel)]="adduser.password" name="password">
+                  <input type="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" name="password">
                   <div class="clearfix"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label class="form-label">Email</label>
-                  <input type="email" class="form-control" placeholder="Email" [(ngModel)]="adduser.email" name="email">
+                  <input type="email" class="form-control" placeholder="Email" [(ngModel)]="user.email" name="email">
                   <div class="clearfix"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label class="form-label">Name</label>
-                  <input type="text" class="form-control" placeholder="Name" [(ngModel)]="adduser.name" name="name">
+                  <input type="text" class="form-control" placeholder="Name" [(ngModel)]="user.name" name="name">
                   <div class="clearfix"></div>
                 </div>
-
-
-
                 <button type="submit" class="btn btn-primary">Save Edit</button>
               </form>
+
             </div>
         </div>
 

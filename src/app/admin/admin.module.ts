@@ -47,5 +47,7 @@ import { RouterModule } from '@angular/router';
     UserService
   ]
 })
+
 export class AdminModule { }
+export class YourModule { }
 

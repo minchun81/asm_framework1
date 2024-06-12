@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../../user.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-user',
@@ -6,12 +9,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-user.component.css']
 })
 export class EditUserComponent implements OnInit {
-  adduser: any = {};
+  user: any = {
+    id: '',
+    userName: '',
+    password: '',
+    email: '',
+    name: ''
+  }
 
-  constructor() { }
+
+  constructor(private route: ActivatedRoute, private router: Router, private userService: UserService) { }
 
   ngOnInit() {
-    this.adduser = {}
+    this.route.params.subscribe(params => {
+      const userId = params['id'];
+      this.userService.getUserById(userId).subscribe(data => {
+        this.user = data;
+
+      });
+    });
+  }
+
+  onSaveEdit(form: NgForm): void {
+    if (form.valid) {
+      this.userService.updateUser(this.user.id, this.user).subscribe(() => {
+        this.router.navigate(['/admin/list-user']);
+      });
+    } else {
+      console.log('Form is invalid');
+    }
+    console.log('Save button clicked');
   }
 
 }

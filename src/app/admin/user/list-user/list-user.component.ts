@@ -75,9 +75,7 @@ export class ListUserComponent implements OnInit {
   }
 
   editUser(id: string): void {
-    this.userService.getUserById(id).subscribe(user => {
-      this.adduser = user;
-    });
+    this.router.navigate(['/admin/edit-user', id]);
   }
 
   onSubmit(): void {

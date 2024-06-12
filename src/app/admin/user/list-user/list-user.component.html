@@ -33,7 +33,7 @@
                     <td scope="col">{{p.email}}</td>
                     <td scope="col">{{p.name}}</td>
                     <td scope="col">{{p.role}}</td>
-                    <td> <a [routerLink]="['/admin/edit-user', p.id]" class="btn btn-primary" ><i class="fa fa-edit"></i></a></td>
+                    <td> <a class="btn btn-primary" ><i class="fa fa-edit" (click)="editUser(p.id)"></i></a></td>
                     <td> <a class="btn btn-danger"><i class="fa fa-trash" (click)="deleteUser(p.id)"></i></a></td>
                 </tr>
             </tbody>
