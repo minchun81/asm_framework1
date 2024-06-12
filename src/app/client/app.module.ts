@@ -10,9 +10,11 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ClientIndexComponent } from './client-index/client-index.component';
 import { ClientProductComponent } from './client-product/client-product.component';
-import { ClientComponentComponent } from './client-component/client-component.component';
 import { AdminModule } from '../admin/admin.module';
 import { HeaderComponent } from './layouts/header/header.component';
+import { ClientComponentComponent } from '../client-component/client-component.component';
+import { ManageComponent } from './auth/manage/manage.component';
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { HeaderComponent } from './layouts/header/header.component';
     ClientProductComponent,
     ClientComponentComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    ManageComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { HeaderComponent } from './layouts/header/header.component';
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
-    AdminModule
+    AdminModule,
+
 
   ],
   providers: [],
