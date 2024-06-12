@@ -13,33 +13,41 @@
         <div class="card mb-4">
             <h6 class="card-header">Add Product</h6>
             <div class="card-body">
-                <form>
-                    <div class="form-group col-md-6">
-                        <label class="form-label">Image</label>
-                        <input type="file" class="form-control" placeholder="Image">
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="form-label ">Name</label>
-                        <input type="text" class="form-control" placeholder="Name">
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="form-label ">Price</label>
-                        <input type="text" class="form-control" placeholder="Enter Price">
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <div class="form-group col-md-4">
-                        <label class="form-label">Status</label>
-                        <select class="custom-select">
-                            <option>Active</option>
-                            <option>Disble</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+              <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+                <div class="form-group col-md-6">
+                  <label class="form-label">Image</label>
+                  <input type="file" class="form-control" formControlName="imageProduct">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" formControlName="nameProduct">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="form-label">Price</label>
+                  <input type="text" class="form-control" formControlName="price">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="form-label">Description</label>
+                  <input type="text" class="form-control" formControlName="description" name="description">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="form-label">Sort Description</label>
+                  <input type="text" class="form-control" formControlName="sortDescription">
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label class="form-label">Status</label>
+                  <select class="custom-select" formControlName="status">
+                    <option value="active">Active</option>
+                    <option value="disable">Disable</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Product</button>
+              </form>
             </div>
         </div>
     </div>

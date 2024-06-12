@@ -20,55 +20,21 @@
                     <th>Password</th>
                     <th>Email</th>
                     <th>Name</th>
+                    <th>role</th>
                     <th>Edit</th>
                     <th>delete</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">trung123</td>
-                    <td scope="col">123456</td>
-                    <td scope="col">anhtrung738@gmail.com</td>
-                    <td scope="col">Huỳnh Minh Trung</td>
-                    <td> <a routerLink="/admin/edit-user" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">trung123</td>
-                    <td scope="col">123456</td>
-                    <td scope="col">anhtrung738@gmail.com</td>
-                    <td scope="col">Huỳnh Minh Trung</td>
-                    <td> <a routerLink="/admin/edit-user" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">trung123</td>
-                    <td scope="col">123456</td>
-                    <td scope="col">anhtrung738@gmail.com</td>
-                    <td scope="col">Huỳnh Minh Trung</td>
-                    <td> <a routerLink="/admin/edit-user" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">trung123</td>
-                    <td scope="col">123456</td>
-                    <td scope="col">anhtrung738@gmail.com</td>
-                    <td scope="col">Huỳnh Minh Trung</td>
-                    <td> <a routerLink="/admin/edit-user" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col">trung123</td>
-                    <td scope="col">123456</td>
-                    <td scope="col">anhtrung738@gmail.com</td>
-                    <td scope="col">Huỳnh Minh Trung</td>
-                    <td> <a routerLink="/admin/edit-user" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+                <tr *ngFor="let p of users">
+                    <th scope="row">{{p.id}}</th>
+                    <td scope="col">{{p.userName}}</td>
+                    <td scope="col">{{p.password}}</td>
+                    <td scope="col">{{p.email}}</td>
+                    <td scope="col">{{p.name}}</td>
+                    <td scope="col">{{p.role}}</td>
+                    <td> <a class="btn btn-primary" ><i class="fa fa-edit" (click)="editUser(p.id)"></i></a></td>
+                    <td> <a class="btn btn-danger"><i class="fa fa-trash" (click)="deleteUser(p.id)"></i></a></td>
                 </tr>
             </tbody>
         </table>

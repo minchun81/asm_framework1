@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-user',
@@ -6,10 +8,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
+  user: any = {
+    userName:'',
+    password:'',
+    email:'',
+    name:'',
+    role:'employee'
+  }
 
-  constructor() { }
+  constructor(private userservice: UserService, private router:Router) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(): void{
+    this.userservice.post(this.user).subscribe(response => {
+      console.log('Người dùng đã thêm:', response);
+      // Redirect to category list or another page
+      this.router.navigate(['/admin/list-user']);
+    }, error => {
+      console.error('Lỗi khi thêm sản phẩm:', error);
+    });
   }
 
 }

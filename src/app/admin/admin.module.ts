@@ -16,9 +16,10 @@ import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { AdminComponentComponent } from './admin-component/admin-component.component';
 import { CategoryService } from './category.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ProductService } from './product.service';
+import { UserService } from './user.service';
 
 @NgModule({
   imports: [
@@ -47,7 +48,9 @@ import { ProductService } from './product.service';
   ],
   providers: [
     CategoryService,
-    ProductService
+    ProductService,
+    UserService
   ],
 })
 export class AdminModule { }
+export class YourModule { }
