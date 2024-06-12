@@ -14,19 +14,10 @@ import { ListUserComponent } from './user/list-user/list-user.component';
 import { AddUserComponent } from './user/add-user/add-user.component';
 import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { AdminComponentComponent } from './admin-component/admin-component.component';
-import { UserService } from './user.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-
 @NgModule({
   imports: [
     CommonModule,
-    AdminRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule
+    AdminRoutingModule
   ],
   declarations: [
     IndexComponent,
@@ -41,10 +32,7 @@ import { RouterModule } from '@angular/router';
     ListUserComponent,
     AddUserComponent,
     EditUserComponent,
-    AdminComponentComponent,
-  ],
-  providers: [
-    UserService
+    AdminComponentComponent
   ]
 })
 

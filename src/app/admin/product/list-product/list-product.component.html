@@ -3,7 +3,6 @@
         <router-outlet></router-outlet>
         <h4 class="font-weight-bold py-3 mb-0">List Product</h4>
 
-
         <hr class="border-light container-m--x my-4">
 
         <div>
@@ -18,61 +17,20 @@
                     <th>Price</th>
                     <th>Status</th>
                     <th>Edit</th>
-                    <th>delete</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="col"><img width="150px" src="https://www.jordbærklausen.dk/wp-content/uploads/2021/04/h3-product10.png" alt=""></td>
-                    <td scope="col">Carrot</td>
-                    <td>25000</td>
-                    <td><a type="a" class="btn btn-round btn-success">active</a></td>
-                    <td> <a routerLink="/admin/edit-product" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td scope="col"><img width="150px" src="https://www.jordbærklausen.dk/wp-content/uploads/2021/04/h3-product10.png" alt=""></td>
-                    <td scope="col">Carrot</td>
-                    <td>25000</td>
-                    <td><a type="a" class="btn btn-round btn-success">active</a></td>
-
-                    <td> <a routerLink="/admin/edit-product" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td scope="col"><img width="150px" src="https://www.jordbærklausen.dk/wp-content/uploads/2021/04/h3-product10.png" alt=""></td>
-                    <td scope="col">Carrot</td>
-                    <td>25000</td>
-                    <td><a type="a" class="btn btn-round btn-success">active</a></td>
-
-                    <td> <a routerLink="/admin/edit-product" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td scope="col"><img width="150px" src="https://www.jordbærklausen.dk/wp-content/uploads/2021/04/h3-product10.png" alt=""></td>
-                    <td scope="col">Carrot</td>
-                    <td>25000</td>
-                    <td><a type="a" class="btn btn-round btn-success">active</a></td>
-                    <td> <a routerLink="/admin/edit-product" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td scope="col"><img width="150px" src="https://www.jordbærklausen.dk/wp-content/uploads/2021/04/h3-product10.png" alt=""></td>
-                    <td scope="col">Carrot</td>
-                    <td>25000</td>
-                    <td><a type="a" class="btn btn-round btn-success">active</a></td>
-
-                    <td> <a routerLink="/admin/edit-product" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-                    <td> <a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+                <tr *ngFor="let product of products">
+                    <th scope="row">{{ product.idProduct }}</th>
+                    <td scope="col"><img width="150px" [src]="product.image" alt="{{ product.name }}">{{product.imageProduct}}</td>
+                    <td scope="col">{{ product.nameProduct }}</td>
+                    <td>{{ product.price }}</td>
+                    <td><a type="a" class="btn btn-round btn-success">{{ product.status }}</a></td>
+                    <td><a (click)="navigateToEditProduct(product.id)" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
+                    <td><a (click)="deleteProduct(product.id)" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
                 </tr>
             </tbody>
         </table>
-
-
     </div>
 </div>

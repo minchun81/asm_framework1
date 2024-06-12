@@ -14,13 +14,12 @@ import { AddUserComponent } from './user/add-user/add-user.component';
 import { EditUserComponent } from './user/edit-user/edit-user.component';
 const routes: Routes = [
   {
-    path: 'admin',
-    component: AdminComponentComponent,
+    path: 'admin',component: AdminComponentComponent,
     children: [
       { path: '', component: IndexComponent }, // Route mặc định cho admin
       // category
       { path: 'list-category', component: ListCategoryComponent },
-      { path: 'edit-category', component: EditCategoryComponent },
+      { path: 'edit-category/:id', component: EditCategoryComponent },
       { path: 'add-category', component: AddCategoryComponent },
       // product
       { path: 'list-product', component: ListProductComponent },
