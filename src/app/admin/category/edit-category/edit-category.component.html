@@ -12,7 +12,7 @@
         <div class="card mb-4">
             <h6 class="card-header">Edit Category</h6>
             <div class="card-body">
-                <form (ngSubmit)="updateCategory()">
+                <form (ngSubmit)="updateCategory()" #categoryForm="ngForm">
                     <div class="form-group col-md-6">
                         <label class="form-label">Image</label>
                         <input type="text" class="form-control" [(ngModel)]="category.image" name="image" placeholder="Image">

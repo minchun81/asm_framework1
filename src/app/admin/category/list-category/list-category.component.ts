@@ -16,9 +16,8 @@ export class ListCategoryComponent implements OnInit {
   }
   fetchCategories(): void {
     this.categoryService.getAllPosts().subscribe(data => {
-      this.categories = data['category'];
-      // console.log(data);
-      
+      this.categories = data['categories'];
+      console.log(data);      
     }, error => {
       console.error('Error fetching categories:', error);
     });

@@ -44,7 +44,6 @@ export class EditCategoryComponent implements OnInit {
       console.error('Error fetching category:', error);
     });
   }
-  
 
   updateCategory(): void {
     console.log('Updating category:', this.category);
