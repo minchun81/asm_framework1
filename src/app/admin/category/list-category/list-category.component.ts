@@ -17,11 +17,12 @@ export class ListCategoryComponent implements OnInit {
   fetchCategories(): void {
     this.categoryService.getAllPosts().subscribe(data => {
       this.categories = data['categories'];
-      console.log(data);      
+      console.log(data);
     }, error => {
       console.error('Error fetching categories:', error);
     });
   }
+  
   deleteCategory(id: string): void {
     if(confirm("Bạn có chắc chắn muốn xóa?")) {
       this.categoryService.deletePost(id).subscribe(response => {
@@ -32,6 +33,7 @@ export class ListCategoryComponent implements OnInit {
       });
     }
   }
+
   navigateToEditCategory(categoryId: string): void {
     this.router.navigate(['/admin/edit-category', categoryId]);
   }

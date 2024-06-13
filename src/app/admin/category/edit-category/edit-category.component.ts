@@ -51,7 +51,7 @@ export class EditCategoryComponent implements OnInit {
       this.categoryService.updatePost(this.category.idCategory, this.category).subscribe(response => {
         console.log('Category updated:', response);
         this.router.navigate(['/admin/list-category']);
-      }, error => {
+      }, error => { 
         console.error('Error updating category:', error);
       });
     } else {
