@@ -29,7 +29,6 @@ export class LoginComponent {
         if (userInfo.password === password) {
           // Đăng nhập thành công, điều hướng đến trang chủ
           localStorage.setItem('loggedIn', 'true');
-          alert('Đăng nhập thành công'); 
           this.router.navigate(['/home']);
           return;
         }

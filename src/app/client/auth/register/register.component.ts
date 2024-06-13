@@ -24,9 +24,6 @@ export class RegisterComponent {
       // Lưu thông tin tài khoản vào localStorage
       const userInfo = this.registerForm.value;
       localStorage.setItem(userInfo.username, JSON.stringify(userInfo));
-
-      alert('Bạn đã đăng ký thành công');
-      
       // Chuyển hướng sang trang login
       this.router.navigate(['/login']);
     } else {
