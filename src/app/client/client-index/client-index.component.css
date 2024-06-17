@@ -486,11 +486,6 @@
     border-bottom: 1px solid #ced4da;
 }
 
-.nav-item a:hover {
-    background-color: #fcbf16 !important;
-    transition: background-color 0.3s ease;
-}
-
 .banner {
     background-color: #fcbf16;
 }
@@ -507,7 +502,6 @@
     background-color: #86BF01 !important; 
     padding: 20px 10px; 
 }
-.fa-search,
     .fa-shopping-bag,
     .fa-user {
         color: #86BF01 !important;
