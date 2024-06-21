@@ -13,24 +13,29 @@
             <h6 class="card-header">Add Category</h6>
             <div class="card-body">
                 <form (ngSubmit)="onSubmit()">
-                    <div class="form-group col-md-6">
-                        <label class="form-label">Image</label>
-                        <input type="text" class="form-control" [(ngModel)]="category.image" name="image" placeholder="Image">
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="form-label ">Name</label>
-                        <input type="text" class="form-control" [(ngModel)]="category.nameCategory" name="nameCategory" placeholder="Name">
-                        <div class="clearfix"></div>
-                    </div>
+                  <div class="form-group col-md-6">
+                    <label class="form-label">Image</label>
+                    <input type="file" class="form-control" [(ngModel)]="category.image" name="image" (change)="uploadFile($event)" placeholder="Image">
+                    <div class="clearfix"></div>
+                    <div class="text-danger small mt-1 font-weight-bold" *ngIf="formErrors.image">{{ formErrors.image }}</div>
+                  </div>
 
-                    <div class="form-group col-md-4">
-                        <label class="form-label">Status</label>
-                        <select class="custom-select" [(ngModel)]="category.status" name="status">
-                            <option value="active">Active</option>
-                            <option value="disable">Disable</option>
-                        </select>
-                    </div>
+                  <div class="form-group col-md-6">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="category.nameCategory" name="nameCategory" placeholder="Name">
+                    <div class="clearfix"></div>
+                    <div class="text-danger small mt-1 font-weight-bold" *ngIf="formErrors.nameCategory">{{ formErrors.nameCategory }}</div>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label class="form-label">Status</label>
+                    <select class="custom-select" [(ngModel)]="category.status" name="status">
+                      <option value="">Select status</option>
+                      <option value="active">Active</option>
+                      <option value="disable">Disable</option>
+                    </select>
+                    <div class="text-danger small mt-1 font-weight-bold" *ngIf="formErrors.status">{{ formErrors.status }}</div>
+                  </div>
 
                     <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
                 </form>
@@ -38,3 +43,7 @@
         </div>
     </div>
 </div>
+
+<script>
+
+</script>

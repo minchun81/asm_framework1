@@ -20,7 +20,9 @@ import { HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ProductService } from './product.service';
 import { UserService } from './user.service';
-
+import { firebaseConfig } from './firebase.config';
+import 'firebase/storage';
+import * as firebase from 'firebase/app';
 @NgModule({
   imports: [
     CommonModule,
@@ -54,3 +56,9 @@ import { UserService } from './user.service';
 })
 export class AdminModule { }
 export class YourModule { }
+export class AppModule {
+  constructor(){
+    firebase.initializeApp(firebaseConfig);
+  }
+}
+
