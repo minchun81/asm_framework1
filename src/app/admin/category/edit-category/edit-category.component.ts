@@ -46,9 +46,16 @@ export class EditCategoryComponent implements OnInit {
   }
 
   updateCategory(): void {
-    console.log('Updating category:', this.category);
     if (this.category.idCategory) {
-      this.categoryService.updatePost(this.category.idCategory, this.category).subscribe(response => {
+      const formData = new FormData();
+      formData.append('idCategory', this.category.idCategory);
+      formData.append('nameCategory', this.category.nameCategory);
+      formData.append('status', this.category.status);
+      if (this.category.image instanceof File) {
+        formData.append('image', this.category.image, this.category.image.name);
+      }
+  
+      this.categoryService.updatePost(this.category.idCategory, formData).subscribe(response => {
         console.log('Category updated:', response);
         this.router.navigate(['/admin/list-category']);
       }, error => {
@@ -58,4 +65,6 @@ export class EditCategoryComponent implements OnInit {
       console.error('Category ID is undefined, cannot update category.');
     }
   }
+  
+  
 }

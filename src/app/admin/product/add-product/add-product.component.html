@@ -1,5 +1,4 @@
 <div class="layout-content">
-
     <div class="container-fluid flex-grow-1 container-p-y">
         <h4 class="font-weight-bold py-3 mb-0">Add Product</h4>
         <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
@@ -9,45 +8,41 @@
                 <li class="breadcrumb-item active">Add Product</li>
             </ol>
         </div>
-
         <div class="card mb-4">
             <h6 class="card-header">Add Product</h6>
             <div class="card-body">
-              <form [formGroup]="productForm" (ngSubmit)="addProduct()">
-                <div class="form-group col-md-6">
-                  <label class="form-label">Image</label>
-                  <input type="file" class="form-control" formControlName="imageProduct">
-                  <div class="clearfix"></div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label class="form-label">Name</label>
-                  <input type="text" class="form-control" formControlName="nameProduct">
-                  <div class="clearfix"></div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label class="form-label">Price</label>
-                  <input type="text" class="form-control" formControlName="price">
-                  <div class="clearfix"></div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label class="form-label">Description</label>
-                  <input type="text" class="form-control" formControlName="description" name="description">
-                  <div class="clearfix"></div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label class="form-label">Sort Description</label>
-                  <input type="text" class="form-control" formControlName="sortDescription">
-                  <div class="clearfix"></div>
-                </div>
-                <div class="form-group col-md-4">
-                  <label class="form-label">Status</label>
-                  <select class="custom-select" formControlName="status">
-                    <option value="active">Active</option>
-                    <option value="disable">Disable</option>
-                  </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Add Product</button>
-              </form>
+                <form [formGroup]="productForm" (ngSubmit)="addProduct()" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="form-label">Image</label>
+                            <input type="file" class="form-control-file" formControlName="imageProduct">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" formControlName="nameProduct">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label">Price</label>
+                            <input type="text" class="form-control" formControlName="price">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label">Description</label>
+                            <input type="text" class="form-control" formControlName="description">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label">Sort Description</label>
+                            <input type="text" class="form-control" formControlName="sortDescription">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="form-label">Status</label>
+                            <select class="custom-select" formControlName="status">
+                                <option value="active">Active</option>
+                                <option value="disable">Disable</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" (click)="addProduct()">Add Product</button>
+                </form>
             </div>
         </div>
     </div>
