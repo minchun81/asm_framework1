@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Food Theme</title>
 </head>
+
 <body>
     <div class="container">
         <div class="row justify-content-center">
@@ -16,7 +18,7 @@
                             <p>Don't have an account?</p>
                             <a href="register" class="btn btn-white btn-outline-white">Sign Up</a>
                         </div>
-                    </div>                
+                    </div>
                     <div class="login-wrap p-4 p-lg-5">
                         <div class="d-flex">
                             <div class="w-100">
@@ -34,7 +36,7 @@
                                 <label class="label" for="username">Username</label>
                                 <input type="text" id="username" formControlName="username" class="form-control" placeholder="Username">
                                 <div *ngIf="loginForm.get('username').touched && loginForm.get('username').invalid">
-                                    <small *ngIf="loginForm.get('username').errors.required" class="error-message">bắt buộc phải nhập Username.</small>
+                                    <small *ngIf="loginForm.get('username').errors.required" class="error-message">Không để trống Username.</small>
                                     <small *ngIf="loginForm.get('username').errors.minlength" class="error-message">Username phải dài hơn 6 ký tự.</small>
                                     <small *ngIf="loginForm.get('username').errors.pattern" class="error-message">Username không được chứa ký tự đặt biệt.</small>
                                 </div>
@@ -43,8 +45,8 @@
                                 <label class="label" for="password">Password</label>
                                 <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password">
                                 <div *ngIf="loginForm.get('password').touched && loginForm.get('password').invalid">
-                                    <small *ngIf="loginForm.get('password').errors.required" class="error-message">bắt buộc phải nhập mật khẩu.</small>
-                                    <small *ngIf="loginForm.get('password').errors.minlength" class="error-message">mật khẩu phải dài hơn 6 ký tự.</small>
+                                    <small *ngIf="loginForm.get('password').errors.required" class="error-message">Không để trống mật khẩu.</small>
+                                    <small *ngIf="loginForm.get('password').errors.minlength" class="error-message">Mật khẩu phải dài hơn 6 ký tự.</small>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -68,4 +70,5 @@
         </div>
     </div>
 </body>
+
 </html>
