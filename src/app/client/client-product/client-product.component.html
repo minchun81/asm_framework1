@@ -399,7 +399,7 @@
                                         </ul>
                                   </div>
                                   <div class="featured__item__text">
-                                      <h6><a class="text-dark text-decoration-none" href="#">{{ product.nameProduct }}</a></h6>
+                                      <h6><a class="text-dark text-decoration-none" [routerLink]="['/client-product', product.idProduct]">{{ product.nameProduct }}</a></h6>
                                       <h6><p class="p-2" style="height: 50px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ product.description }}</p></h6>
                                       <h5>${{ product.price }}</h5>
                                   </div>

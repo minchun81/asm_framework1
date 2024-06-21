@@ -29,7 +29,9 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ClientComponentComponent,
     ContactComponent,
     HeaderComponent,
-    ManageComponent
+    ManageComponent,
+    ProductDetailComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
