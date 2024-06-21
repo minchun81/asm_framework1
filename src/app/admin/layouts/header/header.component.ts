@@ -11,17 +11,17 @@ export class HeaderComponent implements OnInit {
   }
   // dropdownOpen = false;
 
-  //   toggleDropdown(dropdownMenu: HTMLElement) {
-  //     event.preventDefault();
-  //       this.dropdownOpen = !this.dropdownOpen;
-  //       if (this.dropdownOpen) {
-  //           dropdownMenu.classList.add('show');
-  //       } else {
-  //           dropdownMenu.classList.remove('show');
-  //       }
-  //   }
-    
-  //   constructor() { }
+    toggleDropdown(dropdownMenu: HTMLElement) {
+      event.preventDefault();
+        this.dropdownOpen = !this.dropdownOpen;
+        if (this.dropdownOpen) {
+            dropdownMenu.classList.add('show');
+        } else {
+            dropdownMenu.classList.remove('show');
+        }
+    }
+
+    constructor() { }
 
   //   @HostListener('document:click', ['$event.target'])
   // onClick(targetElement: HTMLElement) {

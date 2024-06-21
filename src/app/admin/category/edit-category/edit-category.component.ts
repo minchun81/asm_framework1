@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from '../../category.service';
-
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-edit-category',
   templateUrl: './edit-category.component.html',
@@ -14,6 +14,9 @@ export class EditCategoryComponent implements OnInit {
     image: '',
     status: ''
   };
+
+  submitted = false;
+  @ViewChild('categoryForm') categoryForm: NgForm;
 
   constructor(
     private route: ActivatedRoute,
@@ -58,7 +61,7 @@ export class EditCategoryComponent implements OnInit {
       this.categoryService.updatePost(this.category.idCategory, formData).subscribe(response => {
         console.log('Category updated:', response);
         this.router.navigate(['/admin/list-category']);
-      }, error => { 
+      }, error => {
         console.error('Error updating category:', error);
       });
     } else {
