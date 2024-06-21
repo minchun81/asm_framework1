@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../admin/product.service';
+import { CategoryService } from '../../admin/category.service';
 
 @Component({
   selector: 'app-client-product',
@@ -8,10 +9,12 @@ import { ProductService } from '../../admin/product.service';
 })
 export class ClientProductComponent implements OnInit {
   products: any[] = [];
-  constructor(private productService: ProductService) { }
+  categories: any[] = [];
+  constructor(private productService: ProductService, private categoryService: CategoryService) { }
 
   ngOnInit(): void {
     this.fetchProducts();
+    this.fetchCategories();
   }
 
   fetchProducts(): void {
@@ -20,6 +23,14 @@ export class ClientProductComponent implements OnInit {
       console.log(data);
     }, error => {
       console.error('Error fetching products:', error);
+    });
+  }
+  fetchCategories(): void {
+    this.categoryService.getAllPosts().subscribe(data => {
+      this.categories = data['categories'];
+      console.log(data);      
+    }, error => {
+      console.error('Error fetching categories:', error);
     });
   }
 

@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '321',
+    password: '',
     database: 'asm_framework'
 });
 db.connect(function(err) {

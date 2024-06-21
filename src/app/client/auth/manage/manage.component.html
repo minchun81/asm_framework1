@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage - Food Theme</title>
 </head>
+
 <body>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
                 <div class="wrap d-md-flex">
-                                  
+
                     <div class="login-wrap p-4 p-lg-5">
                         <div class="d-flex">
                             <div class="w-100">
@@ -18,35 +20,36 @@
                             </div>
                         </div>
                         <form [formGroup]="manageForm" (ngSubmit)="login()">
-                          <div class="form-group mb-3">
-                              <label class="label" for="username">Username</label>
-                              <input type="text" id="username" formControlName="username" class="form-control" placeholder="Username">
-                              <div *ngIf="manageForm.get('username').touched && manageForm.get('username').invalid">
-                                  <small *ngIf="manageForm.get('username').errors.required" class="error-message">bắt buộc phải nhập Username.</small>
-                                  <small *ngIf="manageForm.get('username').errors.minlength" class="error-message">Username phải dài hơn 3 ký tự.</small>
-                                  <small *ngIf="manageForm.get('username').errors.pattern" class="error-message">Username không được chứa ký tự đặc biệt.</small>
-                              </div>
-                          </div>
-                          <div class="form-group mb-3">
-                              <label class="label" for="password">Password</label>
-                              <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password">
-                              <div *ngIf="manageForm.get('password').touched && manageForm.get('password').invalid">
-                                  <small *ngIf="manageForm.get('password').errors.required" class="error-message">bắt buộc phải nhập mật khẩu.</small>
-                                  <small *ngIf="manageForm.get('password').errors.minlength" class="error-message">Mật khẩu phải dài hơn 6 ký tự.</small>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
-                          </div>
-                          <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-                              {{ errorMessage }}
-                          </div>
-                      </form>
-                      
+                            <div class="form-group mb-3">
+                                <label class="label" for="username">Username</label>
+                                <input type="text" id="username" formControlName="username" class="form-control" placeholder="Username">
+                                <div *ngIf="manageForm.get('username').touched && manageForm.get('username').invalid">
+                                    <small *ngIf="manageForm.get('username').errors.required" class="error-message">Không để trống Username.</small>
+                                    <small *ngIf="manageForm.get('username').errors.minlength" class="error-message">Username phải dài hơn 3 ký tự.</small>
+                                    <small *ngIf="manageForm.get('username').errors.pattern" class="error-message">Username không được chứa ký tự đặc biệt.</small>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">Password</label>
+                                <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password">
+                                <div *ngIf="manageForm.get('password').touched && manageForm.get('password').invalid">
+                                    <small *ngIf="manageForm.get('password').errors.required" class="error-message">Không để trống mật khẩu.</small>
+                                    <small *ngIf="manageForm.get('password').errors.minlength" class="error-message">Mật khẩu phải dài hơn 6 ký tự.</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                            </div>
+                            <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                                {{ errorMessage }}
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
