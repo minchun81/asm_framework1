@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from '../../category.service';
-
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-edit-category',
   templateUrl: './edit-category.component.html',
@@ -14,6 +14,9 @@ export class EditCategoryComponent implements OnInit {
     image: '',
     status: ''
   };
+
+  submitted = false;
+  @ViewChild('categoryForm') categoryForm: NgForm;
 
   constructor(
     private route: ActivatedRoute,
@@ -47,21 +50,15 @@ export class EditCategoryComponent implements OnInit {
 
   updateCategory(): void {
     console.log('Updating category:', this.category);
-    if (!this.category.nameCategory) {
-      console.error('Error updating category: nameCategory is null');
+    if (this.category.idCategory) {
+      this.categoryService.updatePost(this.category.idCategory, this.category).subscribe(response => {
+        console.log('Category updated:', response);
+        this.router.navigate(['/admin/list-category']);
+      }, error => {
+        console.error('Error updating category:', error);
+      });
     } else {
-      if (this.category.idCategory) {
-        this.categoryService.updateCategory(this.category.idCategory, this.category).subscribe(response => {
-          console.log('Category updated:', response);
-          this.router.navigate(['/admin/list-category']);
-        }, error => {
-          console.error('Error updating category:', error);
-        });
-      } else {
-        console.error('Category ID is undefined, cannot update category.');
-      }
+      console.error('Category ID is undefined, cannot update category.');
     }
-
   }
-
 }

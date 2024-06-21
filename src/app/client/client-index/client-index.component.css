@@ -486,11 +486,6 @@
     border-bottom: 1px solid #ced4da;
 }
 
-.nav-item a:hover {
-    background-color: #fcbf16 !important;
-    transition: background-color 0.3s ease;
-}
-
 .banner {
     background-color: #fcbf16;
 }
@@ -507,7 +502,6 @@
     background-color: #86BF01 !important; 
     padding: 20px 10px; 
 }
-.fa-search,
     .fa-shopping-bag,
     .fa-user {
         color: #86BF01 !important;
@@ -519,3 +513,44 @@
     .featurs-icon.btn-square .fa {
         color: white !important; 
     }
+    
+    .page-header h1 {
+        font-size: 3rem;
+        margin: 0;
+        padding: 0;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+    
+    .page-header h1:hover {
+        transform: scale(1.1);
+        color: #ffd700;
+    }
+    
+    .breadcrumb {
+        display: flex;
+        justify-content: center;
+        background: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    
+    .breadcrumb-item {
+        list-style: none;
+        font-size: 1.2rem;
+    }
+    
+    .breadcrumb-item a {
+        color: white;
+        text-decoration: none;
+        padding: 0 10px;
+        transition: color 0.3s ease;
+    }
+    
+    .breadcrumb-item a:hover {
+        color: #ffd700;
+    }
+    
+    .breadcrumb-item.active {
+        color: #ffd700;
+    }
+    

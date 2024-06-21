@@ -3,7 +3,6 @@ body {
   font-family: 'Arial', sans-serif;
   background: url('../../../../assets/img/logo.png') no-repeat center center fixed;
   background-size: cover;
-  color: #333;
 }
 
 .container {
@@ -22,7 +21,7 @@ body {
 }
 
 .text-wrap {
-  background: linear-gradient(135deg, #fcbf16 0%, #fcbf16 100%);
+  background: linear-gradient(135deg, #fcbf16 0%, #9df5a7 100%);
   color: white;
 }
 

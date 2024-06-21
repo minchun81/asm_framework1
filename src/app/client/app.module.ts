@@ -14,6 +14,7 @@ import { AdminModule } from '../admin/admin.module';
 import { HeaderComponent } from './layouts/header/header.component';
 import { ClientComponentComponent } from '../client-component/client-component.component';
 import { ManageComponent } from './auth/manage/manage.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
@@ -27,7 +28,8 @@ import { ManageComponent } from './auth/manage/manage.component';
     ClientComponentComponent,
     ContactComponent,
     HeaderComponent,
-    ManageComponent
+    ManageComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
