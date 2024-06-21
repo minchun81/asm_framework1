@@ -10,9 +10,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet" />
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -44,11 +42,9 @@
         <div class="container px-0">
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
                 <a href="index.html" class="navbar-brand">
-                    <img class="img-fluid logo w-25 h-25 rounded-circle" style="width: 130px; height: 130px;"
-                        src="../../../assets/img/logo.png" alt="">
+                    <img class="img-fluid logo w-25 h-25 rounded-circle" style="width: 130px; height: 130px;" src="../../../assets/img/logo.png" alt="">
                 </a>
-                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars text-primary"></span>
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
@@ -67,14 +63,12 @@
                         <a href="contact" class="nav-item nav-link">Liên hệ</a>
                     </div>
                     <div class="d-flex m-3 me-0">
-                        <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4"
-                            data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal">
                             <i class="fas fa-search"></i>
                         </button>
                         <a href="#" class="position-relative me-4 my-auto">
                             <i class="fa fa-shopping-bag fa-2x"></i>
-                            <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
-                                style="top: -5px; left: 15px; height: 20px; min-width: 20px">3</span>
+                            <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px">3</span>
                         </a>
                         <a href="#" class="my-auto">
                             <div class="nav-item dropdown">
@@ -103,8 +97,7 @@
                 </div>
                 <div class="modal-body d-flex align-items-center">
                     <div class="input-group w-75 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="Vui lòng nhập từ khóa cần tìm"
-                            aria-describedby="search-icon-1" />
+                        <input type="search" class="form-control p-3" placeholder="Vui lòng nhập từ khóa cần tìm" aria-describedby="search-icon-1" />
                         <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                     </div>
                 </div>
@@ -136,14 +129,13 @@
                           </font>
                         </button>
 
-                      </div>
+                    </div>
                 </div>
                 <div class="col-md-12 col-lg-5">
                     <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-item rounded active">
-                                <img src="../../../assets/img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded"
-                                    alt="">
+                                <img src="../../../assets/img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="">
                             </div>
                         </div>
                     </div>
@@ -250,52 +242,45 @@
                     <div class="col-lg-8 text-end">
                         <ul class="nav nav-pills d-inline-flex text-center mb-5 text-decoration-none">
                             <li class="nav-item">
-                                <a class="d-flex py-2 m-2 bg-light rounded-pill text-decoration-none" data-bs-toggle="pill" href="#tab-2">
-                                    <span class="text-dark " style="width: 130px">Tất cả sản phẩm</span>
+                                <a class="d-flex py-2 m-2 bg-light rounded-pill text-decoration-none" data-bs-toggle="pill" href="#tab-all">
+                                    <span class="text-dark" style="width: 130px">Tất cả sản phẩm</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="d-flex py-2 m-2 bg-light rounded-pill text-decoration-none"  data-bs-toggle="pill" href="#tab-2">
-                                    <span class="text-dark" style="width: 130px">Rau củ</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="d-flex m-2 py-2 bg-light rounded-pill text-decoration-none" data-bs-toggle="pill" href="#tab-3">
-                                    <span class="text-dark" style="width: 130px">Trái cây</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="d-flex m-2 py-2 bg-light rounded-pill text-decoration-none" data-bs-toggle="pill" href="#tab-5">
-                                    <span class="text-dark" style="width: 130px">Thịt</span>
+                            <li class="nav-item" *ngFor="let cate of categories">
+                                <a class="d-flex py-2 m-2 bg-light rounded-pill text-decoration-none" data-bs-toggle="pill" href="#tab-{{cate.id}}">
+                                    <span class="text-dark" style="width: 130px">{{ cate.nameCategory }}</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
+
                 </div>
                 <!--  -->
 
                 <!--  -->
                 <br>
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood" *ngFor="let product of products">
-                    <div class="featured__item border">
-                        <div class="featured__item__pic set-bg">
-                          <img style="max-height: 100%; max-width: 100%;" src="../../../assets/images/tao1.png" alt="">
-                              <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-shopping-bag me-2 text-primary"></i></a></li>
-                              </ul>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood" *ngFor="let product of products">
+                        <div class="featured__item border">
+                            <div class="featured__item__pic set-bg">
+                                <img style="max-height: 100%; max-width: 100%;" src="../../../assets/images/tao1.png" alt="">
+                                <ul class="featured__item__pic__hover">
+                                    <li><a href="#"><i class="fa fa-shopping-bag me-2 text-primary"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6><a class="text-dark text-decoration-none" href="#">{{ product.nameProduct }}</a></h6>
+                                <h6>
+                                    <p class="p-2" style="height: 50px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ product.description }}</p>
+                                </h6>
+                                <h5>${{ product.price }}</h5>
+                            </div>
                         </div>
-                        <div class="featured__item__text">
-                            <h6><a class="text-dark text-decoration-none" href="#">{{ product.nameProduct }}</a></h6>
-                            <h6><p class="p-2" style="height: 50px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ product.description }}</p></h6>
-                            <h5>${{ product.price }}</h5>
-                        </div>
-                      </div>
                     </div>
 
 
                 </div>
-                  <!--  -->
+                <!--  -->
             </div>
         </div>
     </div>
@@ -373,8 +358,7 @@
                 <div class="col-lg-6">
                     <div class="position-relative">
                         <img src="../../../assets/img/baner-1.png" class="img-fluid w-100 rounded" alt="" />
-                        <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute"
-                            style="width: 140px; height: 140px; top: 0; left: 0">
+                        <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style="width: 140px; height: 140px; top: 0; left: 0">
                             <h1 style="font-size: 100px; font-family: 'Pacifico', cursive; color: #ff5722;">1</h1>
                             <div class="d-flex flex-column">
                                 <span class="h2 mb-0" style="color: #ff5722; font-family: 'Montserrat', sans-serif;">50k</span>
@@ -432,8 +416,8 @@
 
     <!-- Fact End -->
 
-     <!-- Footer Start -->
-     <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
         <div class="container py-5">
             <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5)">
                 <div class="row g-4">
@@ -441,10 +425,7 @@
                         <a href="#">
                             <h1 class="text-primary mb-0">
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;"><img
-                                            class="img-fluid logo w-25 h-25 rounded-circle"
-                                            style="width: 130px; height: 130px;" src="../../../assets/img/logo.png"
-                                            alt=""></font>
+                                    <font style="vertical-align: inherit;"><img class="img-fluid logo w-25 h-25 rounded-circle" style="width: 130px; height: 130px;" src="../../../assets/img/logo.png" alt=""></font>
                                 </font>
                             </h1>
                             <p class="text-secondary mb-0">
@@ -479,9 +460,7 @@
                         <p class="mb-4">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;"></font>
-                                <font style="vertical-align: inherit;">Ở NT FOODS thực phẩm luôn luôn tươi mới và sạch
-                                    sẽ, chúng tôi lựa chọn những thực phẩm không có thuốc bảo vệ thực vật
-                                    và chất bảo quản để đưa đến tay người tiêu dùng. Ở nơi đây, chất lượng là tuyệt đối!
+                                <font style="vertical-align: inherit;">Ở NT FOODS thực phẩm luôn luôn tươi mới và sạch sẽ, chúng tôi lựa chọn những thực phẩm không có thuốc bảo vệ thực vật và chất bảo quản để đưa đến tay người tiêu dùng. Ở nơi đây, chất lượng là tuyệt đối!
                                 </font>
                             </font>
                         </p>

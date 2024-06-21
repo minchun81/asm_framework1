@@ -12,7 +12,7 @@ export class ProductService {
     return this.http.get(this.url);
   }
 
-  getCategoryById(id: string): Observable<any> {
+  getProductById(id: string): Observable<any> {
     return this.http.get(`${this.url}/${id}`);
   }
 
