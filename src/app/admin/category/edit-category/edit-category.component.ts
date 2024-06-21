@@ -47,15 +47,21 @@ export class EditCategoryComponent implements OnInit {
 
   updateCategory(): void {
     console.log('Updating category:', this.category);
-    if (this.category.idCategory) {
-      this.categoryService.updatePost(this.category.idCategory, this.category).subscribe(response => {
-        console.log('Category updated:', response);
-        this.router.navigate(['/admin/list-category']);
-      }, error => { 
-        console.error('Error updating category:', error);
-      });
+    if (!this.category.nameCategory) {
+      console.error('Error updating category: nameCategory is null');
     } else {
-      console.error('Category ID is undefined, cannot update category.');
+      if (this.category.idCategory) {
+        this.categoryService.updateCategory(this.category.idCategory, this.category).subscribe(response => {
+          console.log('Category updated:', response);
+          this.router.navigate(['/admin/list-category']);
+        }, error => {
+          console.error('Error updating category:', error);
+        });
+      } else {
+        console.error('Category ID is undefined, cannot update category.');
+      }
     }
+
   }
+
 }

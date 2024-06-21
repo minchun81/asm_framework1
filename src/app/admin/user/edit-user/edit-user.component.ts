@@ -30,14 +30,14 @@ export class EditUserComponent implements OnInit {
     });
   }
 
-  onSaveEdit(form: NgForm): void {
-    if (form.valid) {
-      this.userService.updateUser(this.user.id, this.user).subscribe(() => {
-        this.router.navigate(['/admin/list-user']);
-      });
-    } else {
-      console.log('Form is invalid');
-    }
+  onSaveEdit() {
+    // if (form.valid) {
+      // this.userService.updateUser(this.user.id, this.user).subscribe(() => {
+      //   this.router.navigate(['/admin/list-user']);
+      // });
+    // } else {
+    //   console.log('Form is invalid');
+    // }
     console.log('Save button clicked');
   }
 

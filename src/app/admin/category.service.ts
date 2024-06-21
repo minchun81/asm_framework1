@@ -4,8 +4,12 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class CategoryService {
+  
   url = 'http://localhost:3000/api/category';
-
+  updateCategory(idCategory: any, category: any): Observable<any> {
+    const url = `${this.url}/${idCategory}`;
+    return this.http.put(url, category);
+  }
   constructor(private http: HttpClient) { }
 
   getAllPosts(): Observable<any> {
@@ -28,5 +32,5 @@ export class CategoryService {
     console.log('Sending PUT request to:', `${this.url}/${id}`, 'with data:', data);
     return this.http.put(`${this.url}/${id}`, data);
   }
-  
+
 }
